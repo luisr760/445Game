@@ -6,12 +6,13 @@
       <File FileName="Assets\Scripts\QuitOnClick.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Accelerometer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="6" Column="2" />
       <File FileName="Assets\Scripts\TileManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ItemList.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ItemScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyMove.cs" Line="32" Column="1" />
-      <File FileName="Assets\Scripts\EditorPath.cs" Line="5" Column="21" />
+      <File FileName="Assets\Scripts\EditorPath.cs" Line="9" Column="18" />
+      <File FileName="Assets\Scripts\CreateEditorPath.cs" Line="10" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
