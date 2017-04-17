@@ -21,7 +21,7 @@ public class EnemyMove : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start () {
 
-		//PathToFollow = GameObject.Find(pathName).GetComponent<Editorpath>();
+		PathToFollow = GameObject.Find(pathName).GetComponent<EditorPath>();
 		lastP = transform.position;
 
 	}

@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Accelerometer.cs" />
-     <Compile Include="Assets\Scripts\CreateEditorPath.cs" />
      <Compile Include="Assets\Scripts\EditorPath.cs" />
      <Compile Include="Assets\Scripts\EmptyClass.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
