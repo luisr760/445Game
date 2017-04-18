@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+	//hi
 	GameObject player;
 	void Update(){
 		player = GameObject.FindGameObjectWithTag ("Player");
