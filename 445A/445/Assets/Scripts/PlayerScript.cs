@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour {
 		dir = Vector3.zero;
 
 	}
-		
+
 	void Update() {
 		scoreText.text = score.ToString ();
 		/*
@@ -71,7 +71,7 @@ public class PlayerScript : MonoBehaviour {
 			Ray downRay = new Ray (transform.position, -Vector3.up);
 
 			if(!Physics.Raycast(downRay, out hit)) {
-			
+
 				//Kill Player
 				Debug.Log ("Hello");
 				isDead = true;
@@ -86,7 +86,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	private void GameOver() {
-	
+
 		gameOver.SetTrigger ("GAMEOVER");
 		scoreTexts [1].text = score.ToString ();
 
@@ -98,11 +98,11 @@ public class PlayerScript : MonoBehaviour {
 			highScore.gameObject.SetActive (true);
 			background.color = new Color32 (115, 125, 233, 255);
 			foreach (Text txt in scoreTexts) {
-			
+
 				txt.color = Color.white;
 
 			}
-		
+
 		}
 
 		scoreTexts[3].text = PlayerPrefs.GetInt ("BestScore", 0).ToString ();
