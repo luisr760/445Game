@@ -26,6 +26,8 @@ public class PlayerScript : MonoBehaviour {
 
 	public GameObject particles;
 
+	public GameObject PauseUI;
+
 	public int SCORE {
 		get{
 			return score;
@@ -42,6 +44,8 @@ public class PlayerScript : MonoBehaviour {
 	}
 	void Start() {
 
+		AudioListener.pause = false;
+		PauseUI.SetActive (false);
 		isDead = false;
 		dir = Vector3.zero;
 
@@ -92,11 +96,13 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 	}
+
 	public void DestroyPlayer()
 	{
 		Destroy(gameObject);
 	}
-	public  void GameOver() {
+
+	public void GameOver() {
 
 		gameOver.SetTrigger ("GAMEOVER");
 		scoreTexts [1].text = score.ToString ();
@@ -118,4 +124,25 @@ public class PlayerScript : MonoBehaviour {
 
 		scoreTexts[3].text = PlayerPrefs.GetInt ("BestScore", 0).ToString ();
 	}
+
+	public void Pause() {
+
+		PauseUI.SetActive (true);
+		Time.timeScale = 0.0001f;
+		AudioListener.pause = true;
+		scoreTexts [1].text = score.ToString ();
+
+		int bestText = PlayerPrefs.GetInt ("BestScore", 0);
+
+		scoreTexts[3].text = PlayerPrefs.GetInt ("BestScore", 0).ToString ();
+	}
+
+	public void Resume() {
+		
+		PauseUI.SetActive (false);
+		Time.timeScale = 1;
+		AudioListener.pause = false;
+	
+	}
+	
 }
