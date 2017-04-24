@@ -39,7 +39,7 @@ public class EnemyMove : MonoBehaviour {
 		//go to the end of the waypoint list
 		if(distance <= reachDistance){
 			CurrentWayPointID++;
-			transform.localScale = new Vector2 (transform.localScale.x * -1, transform.localScale.y);
+			transform.localScale = new Vector3 (transform.localScale.x * 1, transform.localScale.y,transform.localScale.z);
 		}
 
 		//start over or put where you want it to go next
@@ -47,7 +47,7 @@ public class EnemyMove : MonoBehaviour {
 		if(CurrentWayPointID >= PathToFollow.path_objs.Count)
 		{
 			CurrentWayPointID = 0;
-			transform.localScale = new Vector2 (transform.localScale.x, transform.localScale.y);
+			transform.localScale = new Vector3 (transform.localScale.x, transform.localScale.y,transform.localScale.z);
 		}
 
 	}

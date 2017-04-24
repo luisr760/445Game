@@ -24,6 +24,8 @@ public class PlayerScript : MonoBehaviour {
 
 	public Text[] scoreTexts;
 
+	public GameObject particles;
+
 	public int SCORE {
 		get{
 			return score;
@@ -31,6 +33,12 @@ public class PlayerScript : MonoBehaviour {
 		set{
 			score = value;
 		}
+	}
+	public bool IsDead {
+		get{
+			return isDead;
+		}
+		set{ isDead = value;}
 	}
 	void Start() {
 
@@ -41,7 +49,7 @@ public class PlayerScript : MonoBehaviour {
 
 	void Update() {
 		scoreText.text = score.ToString ();
-		/*
+
 		if (Input.GetMouseButtonDown (0) && !isDead) {
 
 			score++;
@@ -56,8 +64,8 @@ public class PlayerScript : MonoBehaviour {
 				dir = Vector3.back;
 
 			}
-		}*/
-		dir = Vector3.back;
+		}
+		//dir = Vector3.back;
 		float amountToMove = speed * Time.deltaTime;
 		transform.Translate (dir * amountToMove);
 	}
@@ -84,8 +92,11 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 	}
-
-	private void GameOver() {
+	public void DestroyPlayer()
+	{
+		Destroy(gameObject);
+	}
+	public  void GameOver() {
 
 		gameOver.SetTrigger ("GAMEOVER");
 		scoreTexts [1].text = score.ToString ();
