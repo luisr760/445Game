@@ -68,7 +68,6 @@
      <None Include="Assets\Plugins\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\Plugins\GooglePlayGames\Editor\template-AndroidManifest.txt" />
      <None Include="Assets\Plugins\GooglePlayGames\Editor\template-Constants.txt" />
-     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
      <None Include="Assets\Prefabs\Fruit Pack\README.txt" />
      <None Include="Assets\Plugins\Android\MainLibProj\AndroidManifest.xml" />
  <Reference Include="UnityEditor.Advertisements">
@@ -119,44 +118,17 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
- <Reference Include="Google.IOSResolver">
- <HintPath>C:/Users/Howard Cho/Documents/445/445A/445/Assets/PlayServicesResolver/Editor/Google.IOSResolver.dll</HintPath>
- </Reference>
- <Reference Include="Google.JarResolver">
- <HintPath>C:/Users/Howard Cho/Documents/445/445A/445/Assets/PlayServicesResolver/Editor/Google.JarResolver.dll</HintPath>
- </Reference>
- <Reference Include="Google.PackageManager">
- <HintPath>C:/Users/Howard Cho/Documents/445/445A/445/Assets/PlayServicesResolver/Editor/Google.PackageManager.dll</HintPath>
- </Reference>
- <Reference Include="Google.VersionHandler">
- <HintPath>C:/Users/Howard Cho/Documents/445/445A/445/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.iOS.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.WebGL.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.LinuxStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.OSXStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Common">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
