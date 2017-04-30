@@ -22,11 +22,12 @@ public class ObsScript : MonoBehaviour {
 			}
 		}
 	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
-			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerScript> ().speed += 20;
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerScript> ().speed += 20f;
 			Destroy (gameObject);
 		}
 	}
-	}
+}

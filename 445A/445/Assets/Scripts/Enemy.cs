@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 	void Update(){
 		player = GameObject.FindGameObjectWithTag ("Player");
 		if (transform.position.z > 0) {
-			if (transform.position.z < player.transform.position.z) {
+			if (transform.position.z < player.transform.position.z + 15) {
 				Destroy (gameObject, 2);
 			}
 		} else {
