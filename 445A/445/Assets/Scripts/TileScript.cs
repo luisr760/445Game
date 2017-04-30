@@ -37,7 +37,12 @@ public class TileScript : MonoBehaviour {
 			gameObject.GetComponent<Rigidbody> ().isKinematic = true;
 			gameObject.SetActive (false);
 			break;
-		
+
+		case "LeftTile":
+			TileManager.Instance.LeftTiles.Push (gameObject);
+			gameObject.GetComponent<Rigidbody> ().isKinematic = true;
+			gameObject.SetActive (false);
+			break;
 		}
 	}
 }
