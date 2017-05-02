@@ -11,23 +11,25 @@ public class ItemScript : MonoBehaviour {
 	void Update()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
-		if (transform.position.z > 0) 
+		if (transform.position.z > 0)
 		{
 			if (transform.position.z < player.transform.position.z) {
 				Destroy (gameObject, 2);
 			}
-		} 
-		else 
+		}
+		else
 		{
 			if (transform.position.z > player.transform.position.z) {
 				Destroy (gameObject, 2);
 			}
 		}
 	}
-	void OnTriggerEnter(Collider other) 
+	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerScript> ().SCORE += score;
+			SoundManagerScript.PlaySound("eat");
+
 			Destroy (gameObject);
 		}
 	}

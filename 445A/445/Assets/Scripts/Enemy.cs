@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour {
 
 	void Start()
 	{
-		
+
 	}
 	void Update(){
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -23,9 +23,10 @@ public class Enemy : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other)
 	{
+
 		if (other.gameObject.tag == "Player") {
-			
 			PlayerScript ps = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerScript>();
+			ps.death();
 			ps.IsDead = true;
 			ps.GameOver ();
 			ps.resetButton.SetActive (true);

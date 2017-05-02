@@ -27,8 +27,9 @@ public class ObsScript : MonoBehaviour {
 	{
 		if (other.tag == "Player") {
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerScript> ().speed = 25f;
+			SoundManagerScript.PlaySound("hit");
+			Destroy (gameObject);
 			StartCoroutine (Example());
-			Destroy (gameObject,5);
 		}
 	}
 	IEnumerator Example()

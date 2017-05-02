@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public GameObject PauseUI;
 
+
 	public int SCORE {
 		get{
 			return score;
@@ -55,6 +56,8 @@ public class PlayerScript : MonoBehaviour {
 		scoreText.text = score.ToString ();
 
 		if (Input.GetMouseButtonDown (0) && !isDead) {
+
+
 
 			score++;
 			//scoreText.text = score.ToString ();
@@ -87,6 +90,7 @@ public class PlayerScript : MonoBehaviour {
 				//Kill Player
 				Debug.Log ("Hello");
 				isDead = true;
+				death();
 				GameOver ();
 				resetButton.SetActive (true);
 				if (transform.childCount > 2) {
@@ -102,9 +106,15 @@ public class PlayerScript : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
+  public void death()
+	{
+		SoundManagerScript.PlaySound("death");
+	}
+
 	public void GameOver() {
 
 		gameOver.SetTrigger ("GAMEOVER");
+
 		scoreTexts [1].text = score.ToString ();
 
 		int bestText = PlayerPrefs.GetInt ("BestScore", 0);
@@ -138,11 +148,11 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	public void Resume() {
-		
+
 		PauseUI.SetActive (false);
 		Time.timeScale = 1;
 		AudioListener.pause = false;
-	
+
 	}
-	
+
 }
