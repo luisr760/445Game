@@ -53,7 +53,7 @@ public class PlayerScript : MonoBehaviour {
 
 	void Update() {
 		scoreText.text = score.ToString ();
-
+		/*
 		if (Input.GetMouseButtonDown (0) && !isDead) {
 
 			score++;
@@ -68,8 +68,8 @@ public class PlayerScript : MonoBehaviour {
 				dir = Vector3.back;
 
 			}
-		}
-		//dir = Vector3.back;
+		}*/
+		dir = Vector3.back;
 		float amountToMove = speed * Time.deltaTime;
 		transform.Translate (dir * amountToMove);
 	}
